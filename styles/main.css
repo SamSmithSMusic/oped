@@ -1,26 +1,46 @@
-header {
+:root{
+    --jet: #323031;
+    --gold: #E8D061;
+    --white: #FAFCEB;
+}
 
+body {
+ background-color: #FAFCEB;
+}
+
+header {
+    background-color: #323031;
 }
 
 .navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20vw;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     max-width: 100%;
+    list-style-type: none;
+    text-align: center;
+    padding: 5vw 3vw;
 }
 
-.navbar li a{
-    text-decoration: none;
+.navbar li {
+    display: inline-block;
+    padding: 2vw 2vw;
+    height: 10vw;
+    width: 22vw;
+    vertical-align: center;
 }
 
 #banner-logo{
-    grid-column: 1;
-    width: 30vw;
+    width: 15vw;
 }
 
-#menu {
-    grid-column: 3/4;
+.navItem {
+    text-decoration: none;
+    outline: var(--gold) solid;
 }
 
+.navItem a {
+    text-align: center;
+    text-decoration: none;
+    color: #FAFCEB;
+}
