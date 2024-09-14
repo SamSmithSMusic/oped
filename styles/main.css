@@ -9,25 +9,27 @@ body {
 }
 
 header {
-    background-color: #323031;
+
 }
 
 .navbar{
+    background-color: #323031;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-content: center;
+    gap: 20px;
     max-width: 100%;
     list-style-type: none;
     text-align: center;
-    padding: 5vw 3vw;
+    padding: 5vw 5vw;
 }
 
 .navbar li {
     display: inline-block;
-    padding: 2vw 2vw;
-    height: 10vw;
-    width: 22vw;
-    vertical-align: center;
+    height: 12vw;
+    width: 25vw;
+    text-align: center;
 }
 
 #banner-logo{
@@ -37,10 +39,47 @@ header {
 .navItem {
     text-decoration: none;
     outline: var(--gold) solid;
+    border-radius: 5px;
+}
+
+.navItem a:hover {
+    background-color: #E8D061;
+    color: var(--jet);
+    border-color: var(--jet);
 }
 
 .navItem a {
+    display: flex;
+    height: 100%;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     color: #FAFCEB;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .navbar{
+        grid-column: 2;
+        padding: 2vw 2vw;
+    }
+    .navbar li {
+        height: 6vw;
+        width: 12vw;
+    }
+    #banner-logo{
+        max-height: 100%;
+        max-width: 100%;
+    }
+
 }
