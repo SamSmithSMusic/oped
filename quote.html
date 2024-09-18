@@ -15,14 +15,43 @@
         </ul>
     </header>
 
-    <form class="gform">
-        <label for="fname">First name:</label><br>
-         <input type="text" id="fname" name="fname"><br>
-         <label for="lname">Last name:</label><br>
-         <input type="text" id="lname" name="lname"><br>
-         <label for="email">Email</label><br>
-         <input type="text" id="lname" name="lname"><br><br>
-         <input type="submit" value="Submit">
+    <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbygoRTBKX_ZBeqUynHSu740n3gLg52OfmcS_GchjsBPccXdaasFzrFamadOnR_VuOE/exec">
+        
+        <div style="display:none" class="thankyou_message">
+            <!-- You can customize the thankyou message by editing the code below -->
+            <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+            </h2>
+           </div>
+
+       
+        <label for="fname"class="form-elements">First name:</label><br>
+         <input type="text" class="form-elements" id="fname" name="fname" required><br>
+         
+         <label class="form-elements" for="lname">Last name:</label><br>
+         <input class="form-elements" type="text" id="lname" name="lname"><br>
+         
+         <label class="form-elements" for="email">Email:</label><br>
+         <input class="form-elements" type="email" id="email" name="email" required><br>
+         
+         
+        <input class="form-elements" type="radio" id="Device" name="services" value="Device-Installation">
+        <label class="form-elements" for="Device">Device Installation</label><br>
+        <input class="form-elements" type="radio" id="asset" name="services" value="Asset-Digitization">
+        <label class="form-elements" for="asset">Asset Digitization</label><br>
+        <input class="form-elements" type="radio" id="webdev" name="services" value="WebDev">
+        <label class="form-elements" for="webdev">Website Development</label><br>
+        <input class="form-elements" type="radio" id="other" name="services" value="Other">
+        <label class="form-elements" for="other">Other</label><br>
+
+
+         <label class="form-elements" for="message"></label>
+         <textarea class="form-elements" name="message" placeholder="What can we help you with?"></textarea><br><br>
+
+
+         <input class="form-elements" type="submit" value="Submit">
+
+
+         
     </form>
 
 
@@ -32,5 +61,6 @@
         
     </footer>
     <script type="module" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/form-submission-handler.js"></script>
 </body>
 </html>
