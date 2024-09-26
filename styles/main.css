@@ -9,9 +9,6 @@ body {
  background-color: #FAFCEB;
 }
 
-header {
-
-}
 
 .navbar{
     background-color: #323031;
@@ -20,6 +17,7 @@ header {
     justify-content: space-between;
     align-content: center;
     gap: 20px;
+    font-size: 3vw;
     max-width: 100%;
     list-style-type: none;
     text-align: center;
@@ -70,14 +68,92 @@ header {
 
     color: #E8D061;
 
+    gap: 1.5vw;
     display: grid;
-    grid-template-columns: ;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr;
 }
 
+.thankyou_message {
+    grid-column: 1/3;
+}
 
+/* Request a Quote Form */
 
+form {
+    font-size: 3vw;
+}
 
+form label {
+    text-align: right;
+    align-content: center;
+}
 
+form input, textarea {
+    font-size: 4vw;
+    align-content: center;
+    max-width: 60%;
+}
+
+form input[type="radio"] {
+    accent-color: var(--gold);
+}
+
+#submitbutton {
+    margin: 2vw 15vw;
+    padding: 2vw;
+    font-size: 4vw;
+    background-color: var(--gold);
+    border-radius: 4vw;
+    border: 0px;
+}
+#submitbutton:hover {
+    background-color: #9b7f02;
+    color: var(--white);
+}
+
+label {
+    grid-column: 1/2;
+}
+
+input {
+    grid-column: 2/3;
+}
+
+#fname{
+    grid-row: 1;
+}
+
+#lname{
+    grid-row: 2;
+}
+
+#email{
+    grid-row: 3;
+}
+
+#Device {
+    grid-row: 4;
+}
+
+#asset {
+    grid-row: 5;
+}
+
+#webdev {
+    grid-row: 6;
+}
+
+#other {
+    grid-row: 7;
+}
+
+#message {
+    grid-row: 8;
+}
+#submitbutton {
+    grid-row: 9;
+    grid-column: 1/3;
+}
 
 
 @media (min-width: 768px) {
@@ -90,8 +166,8 @@ header {
         padding: 2vw 2vw;
     }
     .navbar li {
-        height: 6vw;
-        width: 12vw;
+        height: 9vw;
+        width: 18vw;
     }
     #banner-logo{
         max-height: 100%;

@@ -21,34 +21,36 @@
             <!-- You can customize the thankyou message by editing the code below -->
             <h2><em>Thanks</em> for contacting us! We will get back to you soon!
             </h2>
-           </div>
+        </div>
 
        
-        <label for="fname"class="form-elements">First name:</label><br>
-         <input type="text" class="form-elements" id="fname" name="fname" required><br>
+         <label id="fname"  for="fname" class="form-elements">First Name -</label><br>
+         <input maxlength="500" type="text" class="form-elements" id="fname" name="fname" required><br>
          
-         <label class="form-elements" for="lname">Last name:</label><br>
-         <input class="form-elements" type="text" id="lname" name="lname"><br>
+         <label id="lname" class="form-elements" for="lname">Last Name -</label><br>
+         <input maxlength="500" class="form-elements" type="text" id="lname" name="lname"><br>
          
-         <label class="form-elements" for="email">Email:</label><br>
-         <input class="form-elements" type="email" id="email" name="email" required><br>
+         <label id="email" class="form-elements" for="email">Email -</label><br>
+         <input maxlength="500" class="form-elements" type="email" id="email" name="email" required><br>
          
          
         <input class="form-elements" type="radio" id="Device" name="services" value="Device-Installation">
-        <label class="form-elements" for="Device">Device Installation</label><br>
+        <label class="form-elements" id="Device" for="Device">Device Installation</label><br>
+        
         <input class="form-elements" type="radio" id="asset" name="services" value="Asset-Digitization">
-        <label class="form-elements" for="asset">Asset Digitization</label><br>
+        <label class="form-elements" id="asset" for="asset">Asset Digitization</label><br>
+        
         <input class="form-elements" type="radio" id="webdev" name="services" value="WebDev">
-        <label class="form-elements" for="webdev">Website Development</label><br>
+        <label class="form-elements" id="webdev" for="webdev">Website Development</label><br>
+        
         <input class="form-elements" type="radio" id="other" name="services" value="Other">
-        <label class="form-elements" for="other">Other</label><br>
+        <label class="form-elements" id="other" for="other">Other</label><br>
+
+        <textarea maxlength="5000" class="form-elements" id="message" name="message" placeholder="What can we help you with?"></textarea><br><br>
+        <label class="form-elements" id="message" for="message">Description -</label>
 
 
-         <label class="form-elements" for="message"></label>
-         <textarea class="form-elements" name="message" placeholder="What can we help you with?"></textarea><br><br>
-
-
-         <input class="form-elements" type="submit" value="Submit">
+         <input id="submitbutton" class="form-elements" type="submit" value="Submit">
 
 
          
