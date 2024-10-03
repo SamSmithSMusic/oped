@@ -70,7 +70,7 @@ body {
 
     gap: 1.5vw;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr;
+    grid-template: auto / 1fr 1fr;
 }
 
 .thankyou_message {
@@ -80,7 +80,7 @@ body {
 /* Request a Quote Form */
 
 form {
-    font-size: 3vw;
+    font-size: 5.5vw;
 }
 
 form label {
@@ -88,14 +88,19 @@ form label {
     align-content: center;
 }
 
-form input, textarea {
+form input{
     font-size: 4vw;
     align-content: center;
-    max-width: 60%;
+    max-width: 80%;
+}
+form textarea {
+    height: 20vw;
 }
 
 form input[type="radio"] {
     accent-color: var(--gold);
+    height: 8vw;
+    margin: 10px 10px;
 }
 
 #submitbutton {
