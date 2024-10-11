@@ -69,6 +69,7 @@ body {
     color: #E8D061;
 
     display: block;
+    width: 94%;
 }
 
 /* Request a Quote Form */
@@ -90,9 +91,19 @@ form label {
 }
 
 form input{
-    font-size: 4vw;
+    font-size: 6vw;
     align-content: center;
     max-width: 80%;
+    min-height: 44px;
+    min-width: 44px;
+    box-sizing: border-box;
+    border: none;
+}
+form input:invalid {
+    border-right: 3vw solid red ;
+}
+form input:valid {
+    border-right: 3vw solid green;
 }
 form input[type=radio] {
     justify-content: left;
