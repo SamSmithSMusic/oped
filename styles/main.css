@@ -17,7 +17,6 @@ body {
     justify-content: space-between;
     align-content: center;
     gap: 20px;
-    font-size: 3vw;
     max-width: 100%;
     list-style-type: none;
     text-align: center;
@@ -82,8 +81,17 @@ form :is(input,label,textarea) {
     display: block;
 }
 
-form input[type=radio] {
-    display: inline;
+.form-elements+.radio {
+    display: flex;
+    align-items: center;
+}
+
+input#email{
+    margin-bottom: 3vw;
+}
+
+label#message{
+    margin-top: 3vw;
 }
 
 form label {
@@ -105,17 +113,20 @@ form input:invalid {
 form input:valid {
     border-right: 3vw solid green;
 }
-form input[type=radio] {
-    justify-content: left;
-}
+
 form textarea {
     height: 20vw;
+    width: 80%;
+    max-width: 600px;
 }
 
 form input[type="radio"] {
+    justify-content: left;
     accent-color: var(--gold);
     height: 8vw;
+    width: 8vw;
     margin: 10px 10px;
+    display: inline;
 }
 
 #submitbutton {
@@ -131,6 +142,14 @@ form input[type="radio"] {
     color: var(--white);
 }
 
+#budget{
+    margin-top: 1vw;
+}
+
+#budget input {
+    width: 40vw;
+}
+
 
 @media (min-width: 768px) {
     header {
@@ -140,6 +159,7 @@ form input[type="radio"] {
     .navbar{
         grid-column: 2;
         padding: 2vw 2vw;
+        font-size: 3vw;
     }
     .navbar li {
         height: 9vw;
@@ -148,6 +168,9 @@ form input[type="radio"] {
     #banner-logo{
         max-height: 100%;
         max-width: 100%;
+    }
+    form textarea {
+        font-size: 2vw;
     }
 
 }
