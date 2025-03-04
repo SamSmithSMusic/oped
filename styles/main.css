@@ -5,10 +5,18 @@
     --white: #FAFCEB;
 }
 
-body {
- background-color: #FAFCEB;
+html {
+    display: flex;
+    align-items: center;
 }
 
+body {
+ background-color: #FAFCEB;
+ margin: 0 auto;
+ max-width: 1600px;
+ height: 100%;
+ padding: 2vw 2vw;
+}
 
 .navbar{
     background-color: #323031;
@@ -21,6 +29,7 @@ body {
     list-style-type: none;
     text-align: center;
     padding: 5vw 5vw;
+    font-size: 5vw;
 }
 
 .navbar li {
@@ -59,15 +68,63 @@ body {
     justify-content: center;
 }
 
+.hero {
+    background-color: #323031;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 100%;
+    text-align: center;
+    padding: 1vw 4vw;
+    font-size: 5.5vw;
+    color: var(--white)
+}
+.hero b{
+    color: var(--gold);
+}
+.hero p{
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.links {
+    background-color: #323031;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 100%;
+    text-align: center;
+    padding: 4vw 4vw;
+    margin-top: 3vw;
+    font-size: 5vw;
+    color: var(--white);
+}
+
+.links a {
+    border-radius: 3vw;
+    margin-bottom: 2vw;
+    padding: 3vw;
+    font-size: 6vw;
+    text-decoration: none;
+    color: var(--jet);
+    background-color: var(--gold);
+    min-height: 44px;
+}
+
 /* Form CSS */
 .gform {
     background-color: var(--lightJet);
     border-radius: 15px;
     padding: 3vw 3vw;
-
+    
     color: #E8D061;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 94%;
 }
 
@@ -86,9 +143,9 @@ form :is(input,label,textarea) {
     align-items: center;
 }
 
-input#email{
-    margin-bottom: 3vw;
-}
+/* input#email{
+    margin-bottom: 5vw;
+} */
 
 label#message{
     margin-top: 3vw;
@@ -99,6 +156,7 @@ form label {
 }
 
 form input{
+    margin-bottom: 4vw;
     font-size: 6vw;
     align-content: center;
     max-width: 80%;
@@ -118,6 +176,7 @@ form textarea {
     height: 20vw;
     width: 80%;
     max-width: 600px;
+    font-size: 5vw;
 }
 
 form input[type="radio"] {
@@ -129,6 +188,10 @@ form input[type="radio"] {
     display: inline;
 }
 
+form textarea {
+    margin-bottom: 2rem;
+}
+
 #submitbutton {
     margin: 2vw 15vw;
     padding: 2vw;
@@ -136,10 +199,11 @@ form input[type="radio"] {
     background-color: var(--gold);
     border-radius: 4vw;
     border: 0px;
+    transition: transform 0.2s ease-out;;
 }
 #submitbutton:hover {
-    background-color: #9b7f02;
-    color: var(--white);
+    background-color: #b8a44d;
+    transform: scale(1.1);
 }
 
 #budget{
@@ -150,8 +214,20 @@ form input[type="radio"] {
     width: 40vw;
 }
 
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
 
-@media (min-width: 768px) {
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 800px) {
     header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -169,8 +245,54 @@ form input[type="radio"] {
         max-height: 100%;
         max-width: 100%;
     }
+    h1 {
+        margin: 1vw 0;
+    }
+    h2 {
+        margin: 1vw 0;
+        font-size: 5vw;
+    }
+    .links a {
+        width: 50%;
+        font-size: 3rem;
+        margin: 1vw auto;
+        padding: 1vw;
+    }
+    .hero {
+        padding: 2vw 2vw;
+        font-size: 3vw;
+    }
+    .hero p{
+        font-size: 2vw;
+    }
+
+    .links {
+        margin-top: 1vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+
     form textarea {
         font-size: 2vw;
+    }
+
+    form {
+        font-size: 2.5vw;
+    }
+    form input {
+        font-size: 2.5vw;
+        border-radius: 10px;
+        margin-bottom: 2vw;
+    }
+    form input[type="radio"] {
+        height: 2vw;
+        width: 2vw;
+    }
+    #submitbutton {
+        font-size: 2vw;
+        padding: 1vw;
+        margin: 1vw auto;
+        border-radius: 1vw;
     }
 
 }
